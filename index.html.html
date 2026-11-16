@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Parang National High School</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+:root{--navy:#12304f;--navy2:#0c2138;--gold:#e0a526;--bg:#f6f7f9;--surface:#fff;--ink:#1b2430;--muted:#55616f;--line:#dde2e8;--onnavy:#f3f6fa;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--navy:#0c2138;--navy2:#07131f;--gold:#e8b443;--bg:#0f1620;--surface:#17212e;--ink:#e8edf3;--muted:#9eabba;--line:#27364a;color-scheme:dark}}
+:root[data-theme="dark"]{--navy:#0c2138;--navy2:#07131f;--gold:#e8b443;--bg:#0f1620;--surface:#17212e;--ink:#e8edf3;--muted:#9eabba;--line:#27364a;color-scheme:dark}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:Bitter,Georgia,serif;line-height:1.2;margin:0 0 .5em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.note{background:var(--gold);color:#1b2430;text-align:center;font-size:14px;padding:6px 12px}
+header{position:sticky;top:0;z-index:5;background:var(--navy);color:var(--onnavy)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:60px;flex-wrap:wrap}
+.brand{font-family:Bitter,serif;font-weight:700;text-decoration:none;display:flex;align-items:center;gap:10px}
+.logo{width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--navy2);display:grid;place-items:center;font-weight:800;font-size:14px}
+nav{display:flex;gap:18px;flex-wrap:wrap;font-size:15px}
+nav a{text-decoration:none;opacity:.9;padding:6px 0}
+nav a:hover{opacity:1;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:6px}
+.hero{background:var(--navy);color:var(--onnavy);padding:64px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(34px,6vw,60px);font-weight:800}
+.hero p{max-width:52ch;opacity:.92}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-block;padding:12px 22px;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--gold)}
+.btn.p{background:var(--gold);color:#1b2430}
+.btn.s{color:var(--onnavy)}
+.enroll{background:var(--surface);color:var(--ink);border-radius:10px;padding:24px;border-top:6px solid var(--gold)}
+.enroll h2{font-size:22px}
+.enroll ul{margin:0 0 16px;padding-left:20px;color:var(--muted)}
+section{padding:60px 0}
+section h2{font-size:clamp(26px,4vw,36px)}
+.lead{color:var(--muted);max-width:60ch;margin-bottom:28px}
+.facts{display:flex;flex-wrap:wrap;gap:0;background:var(--surface);border:1px solid var(--line);border-radius:10px;margin-top:-36px;position:relative;overflow:hidden}
+.facts div{flex:1 1 180px;padding:18px 22px;border-right:1px solid var(--line)}
+.facts b{display:block;font:800 26px Bitter,serif;color:var(--navy)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .facts b{color:var(--gold)}}
+.facts span{color:var(--muted);font-size:15px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.mv{border-left:4px solid var(--gold);padding-left:16px;margin-bottom:18px}
+.mv h3{font-size:19px;margin-bottom:4px}
+.mv p{margin:0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:22px}
+.card h3{font-size:20px}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+.news{display:grid;gap:14px}
+.item{display:grid;grid-template-columns:70px 1fr;gap:18px;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:16px 18px}
+.date{text-align:center;font-family:Bitter,serif;font-weight:700;line-height:1.1;color:var(--navy)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .date{color:var(--gold)}}
+.date small{display:block;font:600 13px "Source Sans 3",sans-serif;color:var(--muted)}
+.item h3{font-size:18px;margin-bottom:2px}
+.item p{margin:0;color:var(--muted);font-size:16px}
+.msg{max-width:70ch}
+.msg blockquote{margin:0 0 12px;font:500 21px/1.5 Bitter,Georgia,serif}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+dl{margin:0}dt{font-weight:600;margin-top:12px}dd{margin:0;color:var(--muted)}
+footer{background:var(--navy2);color:var(--onnavy);padding:28px 0;font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (max-width:760px){.hero .wrap,.about,.contact{grid-template-columns:1fr}.hero{padding:40px 0 56px}nav{gap:14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="note">Sample content: all names, numbers and dates are placeholders for you to replace.</div>
+<header><div class="wrap">
+<a class="brand" href="#top"><span class="logo" aria-hidden="true">PN</span>Parang National High School</a>
+<nav aria-label="Main"><a href="#about">About</a><a href="#academics">Academics</a><a href="#news">News</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+<div>
+<h1>Learning with purpose. Growing with character.</h1>
+<p>Parang National High School gives every learner a strong academic foundation, good values and the confidence to serve their community.</p>
+<div class="btns"><a class="btn p" href="#enroll">Enroll for SY 2027–2028</a><a class="btn s" href="#about">Learn about us</a></div>
+</div>
+<aside class="enroll" id="enroll">
+<h2>Enrollment is open</h2>
+<ul><li>Grade 7 and transferees: Jan 5 – Feb 6</li><li>Grade 11 (Senior High): Jan 12 – Feb 13</li><li>Bring your report card and PSA birth certificate</li></ul>
+<a class="btn p" href="#contact">Ask the registrar</a>
+</aside>
+</div></div>
+
+<div class="wrap"><div class="facts">
+<div><b>3,200</b><span>Learners enrolled</span></div>
+<div><b>140</b><span>Teachers and staff</span></div>
+<div><b>12</b><span>Programs and strands</span></div>
+<div><b>1968</b><span>Serving since</span></div>
+</div></div>
+
+<section id="about"><div class="wrap about">
+<div>
+<h2>About our school</h2>
+<p class="lead">We are a public secondary school in Parang that welcomes every learner, regardless of background, and helps them grow in knowledge, skills and values.</p>
+<p>Our teachers work closely with parents and the local community so students are supported in class and at home.</p>
+</div>
+<div>
+<div class="mv"><h3>Vision</h3><p>Responsible, innovative and future-ready Filipino learners who contribute to their communities and the nation.</p></div>
+<div class="mv"><h3>Mission</h3><p>To provide quality, inclusive and learner-centered education in a safe and caring environment.</p></div>
+<div class="mv"><h3>Core values</h3><p>Excellence, character and service.</p></div>
+</div>
+</div></section>
+
+<section class="alt" id="academics"><div class="wrap">
+<h2>Academic programs</h2>
+<p class="lead">Choose the path that fits the learner's interests and goals.</p>
+<div class="grid">
+<div class="card"><h3>Junior High School</h3><p>Grades 7 to 10 with the full DepEd curriculum, plus remedial and enrichment classes.</p></div>
+<div class="card"><h3>Senior High School</h3><p>Academic strands (STEM, ABM, HUMSS) and a Technical-Vocational track for work and further study.</p></div>
+<div class="card"><h3>Special programs</h3><p>Science and arts programs, journalism, sports and a student leadership council.</p></div>
+<div class="card"><h3>Learner support</h3><p>Guidance counseling, library, clinic and scholarship assistance.</p></div>
+</div>
+</div></section>
+
+<section id="news"><div class="wrap">
+<h2>News and announcements</h2>
+<p class="lead">The latest updates for learners, parents and teachers.</p>
+<div class="news">
+<article class="item"><div class="date">04<small>Dec</small></div><div><h3>Parent-teacher conference for the 2nd quarter</h3><p>Parents may pick up report cards and meet advisers from 8:00 AM to 3:00 PM.</p></div></article>
+<article class="item"><div class="date">12<small>Dec</small></div><div><h3>Christmas program and class party</h3><p>Classes end at noon. Each section will present one number.</p></div></article>
+<article class="item"><div class="date">20<small>Jan</small></div><div><h3>Science and Math Fair</h3><p>Open to all grade levels. Submit project titles to your subject teacher.</p></div></article>
+</div>
+</div></section>
+
+<section class="alt" id="services"><div class="wrap">
+<h2>Online services</h2>
+<p class="lead">Quick access to the most-used school resources.</p>
+<div class="grid">
+<a class="card" href="#contact"><h3>Student portal</h3><p>Check schedules and requirements.</p></a>
+<a class="card" href="#contact"><h3>Report card</h3><p>View grades online once released.</p></a>
+<a class="card" href="#news"><h3>School calendar</h3><p>Holidays, exams and events.</p></a>
+<a class="card" href="#enroll"><h3>Enrollment</h3><p>Requirements and schedule.</p></a>
+</div>
+</div></section>
+
+<section><div class="wrap msg">
+<h2>Message from the principal</h2>
+<blockquote>“Every learner has something to offer. Our job is to help them find it and use it well.”</blockquote>
+<p>Welcome to Parang National High School. With our teachers, parents and community partners, we will keep working so every student can learn, succeed and make a difference.</p>
+<p><b>Dr. Maria L. Santos</b><br><span style="color:var(--muted)">School Principal (sample name)</span></p>
+</div></section>
+
+<section class="alt" id="contact"><div class="wrap contact">
+<div>
+<h2>Contact us</h2>
+<dl>
+<dt>Address</dt><dd>Parang, Philippines (replace with full address)</dd>
+<dt>Email</dt><dd>parangnhs@example.edu.ph</dd>
+<dt>Phone</dt><dd>(000) 123-4567</dd>
+<dt>Office hours</dt><dd>Monday to Friday, 7:30 AM to 4:30 PM</dd>
+</dl>
+</div>
+<div class="card">
+<h3>Visiting the school</h3>
+<p>Please check in at the guard house and tell the guard whom you are visiting. Parents and guardians are welcome at the registrar's office during office hours.</p>
+</div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Parang National High School. All rights reserved.</span><span>Excellence, character and service.</span></div></footer>
+</body>
+</html>
